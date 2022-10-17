@@ -22,7 +22,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                   child: Image.asset('lib/assets/ic_launcher-web.png'),
                   height: 60.0,
                 ),
-              const   Text(
+                const Text(
                   'Flash Chat',
                   style: TextStyle(
                     fontSize: 45.0,
@@ -42,7 +42,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                 borderRadius: BorderRadius.circular(30.0),
                 child: MaterialButton(
                   onPressed: () {
-                    //Go to login screen.
+                    Navigator.pushNamed(context, "/login"); //Go to login screen.
                   },
                   minWidth: 200.0,
                   height: 42.0,
@@ -60,11 +60,12 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                 elevation: 5.0,
                 child: MaterialButton(
                   onPressed: () {
-                    //Go to registration screen.
+                    Navigator.pushNamed(
+                        context, "/registeration"); //Go to registration screen.
                   },
                   minWidth: 200.0,
                   height: 42.0,
-                  child: Text(
+                  child: const Text(
                     'Register',
                   ),
                 ),
